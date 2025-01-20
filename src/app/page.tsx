@@ -5,10 +5,12 @@ import Header from "@/component/layout/header";
 import Main from "@/component/layout/main";
 import Footer from "@/component/layout/footer";
 import { useEffect } from "react";
+import Head from "next/head";
 
 export default function Home() {
   useEffect(() => {
     const html: HTMLElement | null = document.querySelector("html");
+
     const isLightOrAuto =
       localStorage.getItem("hs_theme") === "light" ||
       (localStorage.getItem("hs_theme") === "auto" &&
