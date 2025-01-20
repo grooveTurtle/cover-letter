@@ -25,10 +25,54 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-neutral-900`}
       >
         {children}
       </body>
     </html>
   );
 }
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <!-- Required Meta Tags Always Come First -->
+//   <meta charset="utf-8">
+//   <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+//   <link rel="canonical" href="https://preline.co/">
+//   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+//   <meta name="description" content="Perfect for showcasing professional background in a CV/Resume format, highlighting skills, experiences, and achievements.">
+
+//   <meta name="twitter:site" content="@preline">
+//   <meta name="twitter:creator" content="@preline">
+//   <meta name="twitter:card" content="summary_large_image">
+//   <meta name="twitter:title" content="Personal Tailwind CSS Template | Preline UI, crafted with Tailwind CSS">
+//   <meta name="twitter:description" content="Perfect for showcasing professional background in a CV/Resume format, highlighting skills, experiences, and achievements.">
+//   <meta name="twitter:image" content="https://preline.co/assets/img/og-image.png">
+
+//   <meta property="og:url" content="https://preline.co/">
+//   <meta property="og:locale" content="en_US">
+//   <meta property="og:type" content="website">
+//   <meta property="og:site_name" content="Preline">
+//   <meta property="og:title" content="Personal Tailwind CSS Template | Preline UI, crafted with Tailwind CSS">
+//   <meta property="og:description" content="Perfect for showcasing professional background in a CV/Resume format, highlighting skills, experiences, and achievements.">
+//   <meta property="og:image" content="https://preline.co/assets/img/og-image.png">
+
+//   <!-- Title -->
+//   <title>Personal Tailwind CSS Template | Preline UI, crafted with Tailwind CSS</title>
+
+//   <!-- Favicon -->
+//   <link rel="shortcut icon" href="../../favicon.ico">
+
+//   <!-- Font -->
+//   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+//   <!-- CSS Preline -->
+//   <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+// </head>
+{
+  /* <body>
+<script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+</body> */
+}
+// </html>
