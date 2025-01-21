@@ -1,0 +1,112 @@
+{
+  "skills": [
+    {
+      "name": "javascript",
+      "level": "high"
+    },
+    {
+      "name": "typescript",
+      "level": "middle"
+    },
+    {
+      "name": "react",
+      "level": "high"
+    },
+    {
+      "name": "next",
+      "level": "high"
+    },
+    {
+      "name": "node",
+      "level": "middle"
+    },
+    {
+      "name": "express",
+      "level": "middle"
+    },
+    {
+      "name": "mongodb",
+      "level": "middle"
+    },
+    {
+      "name": "mysql",
+      "level": "middle"
+    },
+    {
+      "name": "git",
+      "level": "high"
+    },
+    {
+      "name": "github",
+      "level": "high"
+    },
+    {
+      "name": "slack",
+      "level": "high"
+    },
+    {
+      "name": "notion",
+      "level": "high"
+    },
+    {
+      "name": "trello",
+      "level": "high"
+    },
+    {
+      "name": "jira",
+      "level": "middle"
+    },
+    {
+      "name": "confluence",
+      "level": "middle"
+    },
+    {
+      "name": "figma",
+      "level": "middle"
+    },
+    {
+      "name": "photoshop",
+      "level": "middle"
+    },
+    {
+      "name": "illustrator",
+      "level": "middle"
+    },
+    {
+      "name": "premiere",
+      "level": "middle"
+    },
+    {
+      "name": "aftereffects",
+      "level": "middle"
+    },
+    {
+      "name": "blender",
+      "level": "middle"
+    },
+    {
+      "name": "unity",
+      "level": "middle"
+    },
+    {
+      "name": "c#",
+      "level": "middle"
+    },
+    {
+      "name": "java",
+      "level": "middle"
+    },
+    {
+      "name": "python",
+      "level": "middle"
+    },
+    {
+      "name": "c++",
+      "level": "middle"
+    },
+    {
+      "name": "ruby",
+      "level": "middle"
+    }
+  ]
+}

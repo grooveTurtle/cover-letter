@@ -1,4 +1,10 @@
+import getGravatarUrl from "@/utils/getGravatarImage";
+import info from "@/mocks/info.json";
+
 export default function Main() {
+  const gravatarUrl = getGravatarUrl("grooveturtle29@gmail.com", 80);
+  const myInfo: typeof info = info;
+
   return (
     <main id="content">
       <div className="w-full max-w-2xl mx-auto pt-10 md:pt-16 px-4 sm:px-6 lg:px-8">
@@ -6,34 +12,24 @@ export default function Main() {
           <div className="shrink-0">
             <img
               className="shrink-0 size-16 rounded-full"
-              src="https://images.unsplash.com/photo-1510706019500-d23a509eecd4?q=80&w=2667&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={gravatarUrl}
               alt="Avatar"
             />
           </div>
 
           <div className="grow">
             <h1 className="text-lg font-medium text-gray-800 dark:text-neutral-200">
-              Eliana Garcia
+              {myInfo.name}
             </h1>
             <p className="text-sm text-gray-600 dark:text-neutral-400">
-              Graphic Designer, Web designer/developer
+              {myInfo.job}
             </p>
           </div>
         </div>
 
         <div className="mt-8">
-          <p className="text-sm text-gray-600 dark:text-neutral-400">
-            I am a seasoned graphic designer with over 14 years of experience in
-            creating visually appealing and user-centric designs. My expertise
-            spans across UI design, design systems, and custom illustrations,
-            helping clients bring their digital visions to life.
-          </p>
-
-          <p className="mt-3 text-sm text-gray-600 dark:text-neutral-400">
-            Currently, I work remotely for Notion, where I design template UIs,
-            convert them into HTML and CSS, and provide comprehensive support to
-            our users. I am passionate about crafting elegant and functional
-            designs that enhance user experiences.
+          <p className="whitespace-pre-line text-sm text-gray-600 dark:text-neutral-400">
+            {myInfo.detail}
           </p>
 
           <ul className="mt-5 flex flex-col gap-y-3">
@@ -57,7 +53,7 @@ export default function Main() {
                 className="text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
                 href="#"
               >
-                elianagarcia997@about.me
+                {myInfo.email}
               </a>
             </li>
 

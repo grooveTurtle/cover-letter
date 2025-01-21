@@ -1,40 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import Header from "@/component/layout/header";
-import Main from "@/component/layout/main";
-import Footer from "@/component/layout/footer";
+import Header from "@/components/layout/header";
+import Main from "@/components/layout/main";
+import Footer from "@/components/layout/footer";
 import { useEffect } from "react";
-import Head from "next/head";
+import { ThemeProvider } from "@/context/theme";
 
 export default function Home() {
   useEffect(() => {
-    const html: HTMLElement | null = document.querySelector("html");
+    const currentTheme = localStorage.getItem("hs_theme");
 
-    const isLightOrAuto =
-      localStorage.getItem("hs_theme") === "light" ||
-      (localStorage.getItem("hs_theme") === "auto" &&
-        !window.matchMedia("(prefers-color-scheme: dark)").matches);
-    const isDarkOrAuto =
-      localStorage.getItem("hs_theme") === "dark" ||
-      (localStorage.getItem("hs_theme") === "auto" &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    if (isLightOrAuto && html?.classList.contains("dark"))
-      html?.classList.remove("dark");
-    else if (isDarkOrAuto && html?.classList.contains("light"))
-      html?.classList.remove("light");
-    else if (isDarkOrAuto && !html?.classList.contains("dark"))
-      html?.classList.add("dark");
-    else if (isLightOrAuto && !html?.classList.contains("light"))
-      html?.classList.add("light");
+    if (currentTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.add("light");
+    }
   }, []);
 
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <ThemeProvider>
+        <Header />
+        <Main />
+        <Footer />
+      </ThemeProvider>
     </>
   );
 }

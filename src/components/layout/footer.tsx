@@ -12,6 +12,7 @@ export default function Footer() {
                 href="https://preline.co"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-blue-500 dark:text-blue-300"
               >
                 Powered by Preline UI
               </a>
