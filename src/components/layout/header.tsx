@@ -1,7 +1,8 @@
 "use client";
 
 import Darkmode from "@/app/darkmode";
-import { useEffect, useRef, useState } from "react";
+import { scrollToElement } from "@/utils/scroll";
+import { useEffect, useState } from "react";
 
 const sections = [
   { id: "main-profile", title: "Profile" },
@@ -33,7 +34,7 @@ export default function Header() {
       {
         root: null, // Use the viewport as the root
         rootMargin: "0px",
-        threshold: 1,
+        threshold: 0.7,
       }
     );
 
@@ -153,6 +154,10 @@ export default function Header() {
                       }
                     `}
                   href={`#${section.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToElement(section.id);
+                  }}
                 >
                   {section.title}
                 </a>
