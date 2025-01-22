@@ -1,6 +1,6 @@
 export default function Article() {
   return (
-    <div className="my-10 sm:my-14">
+    <div id="main-article" className="my-10 sm:my-14">
       <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200">
         Articles
       </h2>

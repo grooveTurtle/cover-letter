@@ -1,6 +1,6 @@
 export default function Project() {
   return (
-    <div className="mt-10 sm:mt-14">
+    <div id="main-project" className="mt-10 sm:mt-14">
       <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200">
         Projects
       </h2>

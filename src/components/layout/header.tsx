@@ -1,6 +1,49 @@
+"use client";
+
 import Darkmode from "@/app/darkmode";
+import { useEffect, useRef, useState } from "react";
+
+const sections = [
+  { id: "main-profile", title: "Profile" },
+  // { id: "main-about", title: "About" },
+  { id: "main-history", title: "History" },
+  { id: "main-skill", title: "Skill" },
+  { id: "main-project", title: "Project" },
+  // { id: "main-testimonial", title: "Testimonial" },
+  { id: "main-education", title: "Education" },
+  // { id: "main-article", title: "Article" },
+];
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sectionElements = sections.map((section) =>
+      document.getElementById(section.id)
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id); // Update active section
+          }
+        });
+      },
+      {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px",
+        threshold: 1,
+      }
+    );
+
+    sectionElements.forEach((el) => el && observer.observe(el));
+
+    return () => {
+      sectionElements.forEach((el) => el && observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <header className="sticky top-0 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
       <nav className="mt-4 relative max-w-2xl w-full bg-white border border-gray-200 rounded-[2rem] mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto dark:bg-neutral-900 dark:border-neutral-700">
@@ -98,15 +141,33 @@ export default function Header() {
           aria-labelledby="hs-navbar-header-floating-collapse"
         >
           <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
-            <a
+            {sections.map((section, index) => {
+              return (
+                <a
+                  key={index}
+                  className={`py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 border-gray-800 font-medium focus:outline-none 
+                      ${
+                        activeSection === section.id
+                          ? "border-b-2 text-gray-800 dark:border-neutral-200 dark:text-neutral-200"
+                          : "text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+                      }
+                    `}
+                  href={`#${section.id}`}
+                >
+                  {section.title}
+                </a>
+              );
+            })}
+
+            {/* <a
               className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200"
               href="#"
               aria-current="page"
             >
               Home
-            </a>
-            <a
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
+            </a> */}
+            {/* <a
+              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent focus:outline-none text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
               href="#"
             >
               Projects
@@ -122,7 +183,7 @@ export default function Header() {
               href="#"
             >
               Articles
-            </a>
+            </a> */}
 
             <Darkmode />
           </div>

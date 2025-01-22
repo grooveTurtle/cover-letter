@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function History() {
   return (
-    <div className="mt-10 sm:mt-14">
+    <div id="main-history" className="mt-10 sm:mt-14">
       <h2 className="mb-5 font-medium text-gray-800 dark:text-neutral-200">
         History
       </h2>

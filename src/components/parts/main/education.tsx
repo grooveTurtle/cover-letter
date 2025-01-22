@@ -1,6 +1,6 @@
 export default function Education() {
   return (
-    <div className="mt-10 sm:mt-14">
+    <div id="main-education" className="mt-10 sm:mt-14">
       <h2 className="mb-3 font-medium text-gray-800 dark:text-neutral-200">
         Education
       </h2>

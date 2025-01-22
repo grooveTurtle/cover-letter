@@ -6,7 +6,7 @@ export default function Profile() {
   const myInfo: typeof info = info;
 
   return (
-    <div className="flex items-center gap-x-3">
+    <div id="main-profile" className="flex items-center gap-x-3">
       <div className="shrink-0">
         <img
           className="shrink-0 size-16 rounded-full"
