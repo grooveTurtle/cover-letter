@@ -32,9 +32,9 @@ export default function Header() {
         });
       },
       {
-        root: null, // Use the viewport as the root
+        root: null,
         rootMargin: "0px",
-        threshold: 0.7,
+        threshold: 1,
       }
     );
 
