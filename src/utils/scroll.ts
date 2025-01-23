@@ -1,3 +1,5 @@
+import { elementScrollIntoView } from "seamless-scroll-polyfill";
+
 export function scrollToElement(
   id: string | undefined,
   option: ScrollToOptions | ScrollIntoViewOptions = {
@@ -10,11 +12,13 @@ export function scrollToElement(
   const element = document.getElementById(id);
 
   if (element) {
-    element.scrollIntoView(option);
+    // element.scrollIntoView(option);
 
-    const offset = 70;
-    const yOffset =
-      element.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top: yOffset, behavior: "smooth" });
+    // const offset = 70;
+    // const yOffset =
+    //   element.getBoundingClientRect().top + window.scrollY - offset;
+    // window.scrollTo({ top: yOffset, behavior: "smooth" });
+
+    elementScrollIntoView(element, { behavior: "smooth" });
   }
 }
