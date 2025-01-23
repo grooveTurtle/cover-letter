@@ -4,7 +4,7 @@ import History from "@/components/parts/main/history";
 import Skill from "@/components/parts/main/skill";
 import Project from "@/components/parts/main/project";
 import Testimonial from "@/components/parts/main/testimonial";
-import Education from "@/components/parts/main/education";
+import Education from "@/components/parts/main/license";
 import Article from "@/components/parts/main/article";
 
 export default function Main() {
@@ -17,13 +17,13 @@ export default function Main() {
 
         <History />
 
+        <Education />
+
         <Skill />
 
         <Project />
 
         <Testimonial />
-
-        <Education />
 
         <Article />
       </div>

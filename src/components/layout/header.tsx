@@ -8,10 +8,10 @@ const sections = [
   { id: "main-profile", title: "Profile" },
   // { id: "main-about", title: "About" },
   { id: "main-history", title: "History" },
+  { id: "main-license", title: "License" },
   { id: "main-skill", title: "Skill" },
   { id: "main-project", title: "Project" },
   // { id: "main-testimonial", title: "Testimonial" },
-  { id: "main-education", title: "Education" },
   // { id: "main-article", title: "Article" },
 ];
 
