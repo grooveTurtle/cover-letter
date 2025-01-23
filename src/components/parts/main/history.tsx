@@ -79,9 +79,10 @@ export default function History() {
               수원대학교 학사 졸업
             </p>
 
-            <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-              정보보호학과 전공
-            </p>
+            <div className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
+              <p>전공: 정보보호학과</p>
+              <p>학점: 3.91/4.5</p>
+            </div>
 
             <div className="mt-3">
               <a
@@ -141,7 +142,7 @@ export default function History() {
             </h3>
 
             <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
-              광영남자고등학교 졸업
+              광영남자고등학교 이공계열 졸업
             </p>
           </div>
         </div>
