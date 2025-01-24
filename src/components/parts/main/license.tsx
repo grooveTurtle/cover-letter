@@ -46,7 +46,7 @@ export default function License() {
 
           <div>
             <h3 className="mt-1 mb-1 text-xs text-gray-600 dark:text-neutral-400">
-              2011.02
+              2011.03
             </h3>
 
             <p className="font-semibold text-sm text-gray-800 dark:text-neutral-200">
