@@ -1,0 +1,18 @@
+1:"$Sreact.fragment"
+2:I[5244,[],""]
+3:I[3866,[],""]
+4:I[7033,[],"ClientPageRoot"]
+5:I[2076,["362","static/chunks/30a37ab2-f29c8f710411f7be.js","204","static/chunks/94730671-dd4b00be839fb7fb.js","613","static/chunks/f25cdb8d-fbceee13d0b1b1fe.js","512","static/chunks/9c4e2130-8af6ffe877f72a8a.js","711","static/chunks/8e1d74a4-3613c400ffe3e6e5.js","672","static/chunks/a0f462e1-be21805cc156a02c.js","268","static/chunks/aaea2bcf-3878b47eda35ec9e.js","523","static/chunks/523-9b198fccdc3457dd.js","974","static/chunks/app/page-52bf8ca97889c495.js"],"default"]
+8:I[6213,[],"OutletBoundary"]
+a:I[6213,[],"MetadataBoundary"]
+c:I[6213,[],"ViewportBoundary"]
+e:I[4835,[],""]
+:HC["/",""]
+:HL["/cover-letter/_next/static/css/ef081d95db6b0fd2.css","style"]
+:HL["/cover-letter/_next/static/css/286029fb2ea0dd5c.css","style"]
+0:{"P":null,"b":"NqgxAQJ6--rHjiXwmZKMU","p":"/cover-letter","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/cover-letter/_next/static/css/ef081d95db6b0fd2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/cover-letter/_next/static/css/286029fb2ea0dd5c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[null,["$","body",null,{"className":"__className_96b692 antialiased dark:bg-neutral-900","children":["$","$L2",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L4",null,{"Component":"$5","searchParams":{},"params":{},"promises":["$@6","$@7"]}],null,["$","$L8",null,{"children":"$L9"}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","NSJfRfJNsngypSqVrCEFN",{"children":[["$","$La",null,{"children":"$Lb"}],["$","$Lc",null,{"children":"$Ld"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+6:{}
+7:{}
+d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"전종훈 - 개발자 포트폴리오"}],["$","meta","2",{"name":"description","content":"전종훈의 포트폴리오와 자기소개 페이지입니다."}],["$","link","3",{"rel":"icon","href":"/cover-letter/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+9:null
