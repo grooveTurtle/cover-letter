@@ -1,20 +1,44 @@
-import { useTheme } from "@/context/theme";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Darkmode() {
-  const { isDarkMode, toggleDarkMode } = useTheme();
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
-    console.log("isDarkMode:::", isDarkMode);
-  }, [isDarkMode]);
+    if (
+      localStorage.getItem("theme") === "dark" ||
+      (!localStorage.getItem("theme") &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+    setIsHydrated(true);
+  }, []);
+
+  const toggleTheme = () => {
+    if (theme === "dark") {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setTheme("light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setTheme("dark");
+    }
+  };
+
+  if (!isHydrated) return null;
 
   return (
     <>
-      {!isDarkMode ? (
+      {theme === "light" ? (
         <button
           type="button"
           className="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-          onClick={toggleDarkMode}
+          onClick={toggleTheme}
         >
           <span className="sr-only">Dark</span>
           <svg
@@ -36,7 +60,7 @@ export default function Darkmode() {
         <button
           type="button"
           className="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-          onClick={toggleDarkMode}
+          onClick={toggleTheme}
         >
           <span className="sr-only">Light</span>
           <svg

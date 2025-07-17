@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const repoName = "cover-letter";
 
 const nextConfig: NextConfig = {
@@ -7,7 +9,7 @@ const nextConfig: NextConfig = {
   assetPrefix: `/${repoName}`,
   basePath: `/${repoName}`,
   trailingSlash: true,
-  output: "export",
+  ...(isProd ? { output: "export" } : {}),
   images: {
     unoptimized: true, // ✅ 반드시 추가!
   },
