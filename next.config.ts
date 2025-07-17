@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
   basePath: `/${repoName}`,
   trailingSlash: true,
   output: "export",
+  images: {
+    unoptimized: true, // ✅ 반드시 추가!
+  },
 };
 
 export default nextConfig;

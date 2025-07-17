@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Header from "@/components/layout/header";
 import Main from "@/components/layout/main";
 import Footer from "@/components/layout/footer";

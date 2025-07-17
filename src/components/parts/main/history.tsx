@@ -1,4 +1,3 @@
-import Image from "next/image";
 import history from "@/mocks/history.json";
 
 export default function History() {
@@ -32,7 +31,7 @@ export default function History() {
                     <rect width="20" height="14" x="2" y="6" rx="2" />
                   </svg>
                 ) : (
-                  <Image
+                  <img
                     className="shrink-0 size-8 rounded-full"
                     src={
                       `${item.logo.src}` ? `/cover-letter/${item.logo.src}` : ""

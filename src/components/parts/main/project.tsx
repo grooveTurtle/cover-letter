@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState } from "react";
 import { FaLink } from "react-icons/fa";
 
@@ -316,7 +315,7 @@ export default function CareerList() {
             />
             <div className="flex-1 w-full ">
               <div className="flex w-full flex-row gap-1  items-center sm:gap-1">
-                <Image
+                <img
                   className="mt-[1px] h-[14px]"
                   src={
                     career.logo.src ? `/cover-letter/${career.logo.src}` : ""

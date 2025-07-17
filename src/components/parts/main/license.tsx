@@ -1,4 +1,3 @@
-import Image from "next/image";
 import license from "@/mocks/license.json";
 
 export default function License() {
@@ -16,7 +15,7 @@ export default function License() {
             className="flex p-4 gap-3 border border-gray-200 rounded-lg dark:border-neutral-700 items-center"
           >
             <div>
-              <Image
+              <img
                 src={`/cover-letter/${license.src}`}
                 alt={license.alt}
                 width={52}
