@@ -33,13 +33,15 @@ export default function Darkmode() {
   if (!isHydrated) return null;
 
   return (
-    <>
+    <button
+      type="button"
+      className="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full 
+      bg-gray-200 focus:outline-none hover:bg-gray-300
+      dark:bg-neutral-700 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-500"
+      onClick={toggleTheme}
+    >
       {theme === "light" ? (
-        <button
-          type="button"
-          className="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-          onClick={toggleTheme}
-        >
+        <>
           <span className="sr-only">Dark</span>
           <svg
             className="shrink-0 size-3.5"
@@ -55,13 +57,9 @@ export default function Darkmode() {
           >
             <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
           </svg>
-        </button>
+        </>
       ) : (
-        <button
-          type="button"
-          className="relative flex justify-center items-center size-7 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-          onClick={toggleTheme}
-        >
+        <>
           <span className="sr-only">Light</span>
           <svg
             className="shrink-0 size-3.5"
@@ -85,8 +83,8 @@ export default function Darkmode() {
             <path d="m6.34 17.66-1.41 1.41"></path>
             <path d="m19.07 4.93-1.41 1.41"></path>
           </svg>
-        </button>
+        </>
       )}
-    </>
+    </button>
   );
 }
