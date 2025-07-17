@@ -1,18 +1,23 @@
 import { DiRedis } from "react-icons/di";
 import {
+  FaAws,
   FaBookOpen,
   FaCss3Alt,
+  FaDocker,
   FaGithub,
   FaGitlab,
   FaNodeJs,
   FaReact,
   FaRegLightbulb,
   FaSlack,
+  FaSmile,
   FaTools,
   FaUserCheck,
   FaUserFriends,
+  FaUsers,
 } from "react-icons/fa";
 import { IoLogoFigma } from "react-icons/io5";
+import { LiaDocker } from "react-icons/lia";
 import { RiNextjsFill, RiSvelteFill, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiPhp,
@@ -49,10 +54,18 @@ const skillData = {
     { icon: <FaGitlab size={18} />, label: "GitLab" },
     { icon: <FaGithub size={18} />, label: "GitHub Organization" },
   ],
+  devops: [
+    { icon: <FaDocker size={18} />, label: "Docker" },
+    { icon: <LiaDocker size={18} />, label: "Docker-Compose" },
+    { icon: <FaAws size={18} />, label: "AWS(EC2, S3, RDS)" },
+    { icon: <FaGitlab size={18} />, label: "GitLab CI/CD" },
+  ],
   mindset: [
     { icon: <FaRegLightbulb size={18} />, label: "적응력" },
     { icon: <FaUserCheck size={18} />, label: "책임감" },
     { icon: <FaUserFriends size={18} />, label: "유저 중심 사고" },
+    { icon: <FaSmile size={18} />, label: "긍정적인 태도" },
+    { icon: <FaUsers size={18} />, label: "사교성" },
     { icon: <FaBookOpen size={18} />, label: "자기개발" },
     { icon: <FaTools size={18} />, label: "리팩토링" },
   ],
@@ -78,6 +91,8 @@ export default function Skill() {
                       return "Frontend";
                     case "collaboration":
                       return "Collaboration";
+                    case "devops":
+                      return "Infra / DevOps";
                     case "mindset":
                       return "Mindset";
                     default:

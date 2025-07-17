@@ -68,29 +68,29 @@ export default function History() {
               )}
               {item.info && (
                 <div className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-                  <p>전공: {item.info.major}</p>
-                  <p>학점: {item.info.grade}</p>
+                  <p>{item.info.content1}</p>
+                  <p>{item.info.content2}</p>
                 </div>
               )}
-              {item.blog && (
+              {item.link && (
                 <div className="mt-3">
                   <a
                     className="block border border-gray-200 rounded-lg hover:shadow-sm focus:outline-none dark:border-neutral-700"
-                    href={item.blog.href}
+                    href={item.link.href}
                   >
                     <div className="relative flex items-center overflow-hidden">
                       <img
-                        className="w-32 sm:w-48 h-full absolute inset-0 object-cover rounded-s-lg"
-                        src={item.blog.img.src}
-                        alt={item.blog.img.alt}
+                        className="w-32 sm:w-48 h-auto object-contain rounded-s-lg absolute left-0 top-1/2 -translate-y-1/2"
+                        src={item.link.img.src}
+                        alt={item.link.img.alt}
                       />
                       <div className="grow p-4 ms-32 sm:ms-48">
                         <div className="min-h-24 flex flex-col justify-center">
                           <h3 className="font-semibold text-sm text-gray-800 dark:text-neutral-300">
-                            {item.blog.title}
+                            {item.link.title}
                           </h3>
                           <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                            {item.blog.description}
+                            {item.link.description}
                           </p>
                         </div>
                       </div>
