@@ -1,0 +1,53 @@
+[
+  {
+    "type": "work",
+    "logo": {
+      "src": "/inven2.png",
+      "width": 32,
+      "height": 32,
+      "alt": "Inven Logo"
+    },
+    "period": "2018.04 - 2025.01",
+    "title": "풀스택 웹 개발 (선임 개발자)",
+    "description": "인벤 KR의 각종 신규 프로젝트를 진행 및 시스템 유지보수를 진행하였습니다.",
+    "details": [
+      "Designed template UIs and design systems in Figma.",
+      "Converted UIs into responsive HTML and CSS with a mobile-first approach.",
+      "Created custom illustrations and item description banners.",
+      "Provided detailed documentation and customer support on GitHub.",
+      "Engaged with users to address setup inquiries, bug issues, and feedback."
+    ],
+    "blog": {
+      "href": "#",
+      "img": {
+        "src": "https://images.unsplash.com/photo-1661956600655-e772b2b97db4?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "alt": "Blog Image"
+      },
+      "title": "Studio by Mailchimp",
+      "description": "Produce professional, reliable streams easily leveraging Mailchimp's innovative broadcast studio."
+    }
+  },
+  {
+    "type": "education",
+    "logo": {
+      "src": "/suwon2.png",
+      "width": 32,
+      "height": 32,
+      "alt": "수원대학교 로고"
+    },
+    "period": "2009 - 2016",
+    "title": "수원대학교 학사 졸업",
+    "info": {
+      "major": "정보보호학과",
+      "grade": "3.91/4.5"
+    }
+  },
+  {
+    "type": "school",
+    "logo": {
+      "svg": true
+    },
+    "period": "2006 - 2009",
+    "title": "광영남자고등학교 이공계열 졸업"
+  }
+]
