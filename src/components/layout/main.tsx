@@ -3,9 +3,7 @@ import About from "@/components/parts/main/about";
 import History from "@/components/parts/main/history";
 import Skill from "@/components/parts/main/skill";
 import Project from "@/components/parts/main/project";
-import Testimonial from "@/components/parts/main/testimonial";
 import Education from "@/components/parts/main/license";
-import Article from "@/components/parts/main/article";
 
 export default function Main() {
   return (
@@ -22,10 +20,6 @@ export default function Main() {
         <Skill />
 
         <Project />
-
-        <Testimonial />
-
-        <Article />
       </div>
     </main>
   );

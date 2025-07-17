@@ -1,5 +1,6 @@
+"use client";
 // context/ThemeContext.tsx
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 interface ThemeContextProps {
   isDarkMode: boolean;
@@ -13,8 +14,13 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const currentTheme: string | null = localStorage.getItem("hs_theme");
-  const [isDarkMode, setIsDarkMode] = useState(currentTheme === "dark");
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Read localStorage only on client side after mount
+  useEffect(() => {
+    const currentTheme = localStorage.getItem("hs_theme");
+    setIsDarkMode(currentTheme === "dark");
+  }, []);
 
   const toggleDarkMode = () => {
     setIsDarkMode((prev) => {
