@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { FaLink } from "react-icons/fa";
 
 interface CareerItem {
   images: string[];
@@ -10,6 +11,10 @@ interface CareerItem {
     alt?: string;
   };
   title: string;
+  links?: {
+    title: string;
+    url: string;
+  }[];
   period: string;
   roles: string;
   description: string[];
@@ -41,6 +46,16 @@ const careers: CareerItem[] = [
     ],
     result: ["일 이용량 8천~1만건 달성", "스티커 팩 판매량 일 600~700건"],
     skills: ["PHP", "Svelte", "MYSQL", "Redis"],
+    links: [
+      {
+        title: "아이마트 스티커샵 링크",
+        url: "https://imart.inven.co.kr/shop/sticker/",
+      },
+      {
+        title: "실제 댓글 스티커 사용 예시 링크",
+        url: "https://www.inven.co.kr/board/webzine/2097/2341027#powerbbsCmt2",
+      },
+    ],
   },
   {
     images: [
@@ -58,6 +73,16 @@ const careers: CareerItem[] = [
     ],
     result: ["총 인증 횟수 2만명 돌파", "리뉴얼 인장 지급 갯수 4.5만개 돌파"],
     skills: ["PHP", "Svelte", "MYSQL", "Redis"],
+    links: [
+      {
+        title: "메이플스토리 인장 지급 이벤트 페이지",
+        url: "https://www.inven.co.kr/event/maple/profile/",
+      },
+      {
+        title: "리뉴얼 인장 장착 예시 링크",
+        url: "https://www.inven.co.kr/member/inventory/view_inventory.php?nick=Laravel&isMobile=true&skin_idx=85341237",
+      },
+    ],
   },
   {
     images: [
@@ -77,6 +102,20 @@ const careers: CareerItem[] = [
       "시뮬레이터, DB 페이지 최대 UV 10만 달성",
     ],
     skills: ["PHP", "Svelte", "JQuery", "MYSQL"],
+    links: [
+      {
+        title: "정복자 시뮬레이터 링크",
+        url: "https://diablo4.inven.co.kr/db/paragon/86555",
+      },
+      {
+        title: "힘의전서 DB 링크",
+        url: "https://diablo4.inven.co.kr/db/aspect",
+      },
+      {
+        title: "디아블로 모바일 리뉴얼 인벤 링크",
+        url: "https://m.inven.co.kr/diablo4/",
+      },
+    ],
   },
   {
     images: [
@@ -92,8 +131,18 @@ const careers: CareerItem[] = [
       "파티 인벤 메인, 모바일 파티 인벤 별도 페이지 개발",
       "메인/모바일 파티 인벤 메인 페이지 개발",
     ],
-    result: ["오픈 이후 UV 3~5만 유지"],
+    result: ["오픈 이후 UV 최고 5만 달성"],
     skills: ["PHP", "JQuery", "MYSQL", "jsrender"],
+    links: [
+      {
+        title: "파티 인벤 메인 링크",
+        url: "https://party.inven.co.kr/",
+      },
+      {
+        title: "카스 글옵 파티 인벤 게시판 링크",
+        url: "https://party.inven.co.kr/csgo",
+      },
+    ],
   },
   {
     images: [
@@ -112,6 +161,54 @@ const careers: CareerItem[] = [
       "HTML 캐시 적용으로 페이지 로딩 속도 개폭 개선 (기존 약 1.7초 -> 0.5초)",
     ],
     skills: ["PHP", "JQuery", "MYSQL"],
+    links: [
+      {
+        title: "웹진 모바일 리뉴얼 페이지 링크",
+        url: "https://m.inven.co.kr/",
+      },
+    ],
+  },
+  {
+    images: [
+      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+    ],
+    logo: InvenLogo,
+    title: "우마무스메 친구찾기 시뮬레이터 개발",
+    period: "2021.11 - 2022.06",
+    roles: "풀스택 개발 ｜ 연구원",
+    description: ["우마무스메 인벤 프로젝트 중 친구찾기 시뮬레이터 개발 담당"],
+    result: ["자료정보 페이지 UV 6만, PV 127만 달성"],
+    skills: ["PHP", "JQuery", "JsRender", "MYSQL"],
+    links: [
+      {
+        title: "우마무스메 친구찾기 시뮬레이터 링크",
+        url: "https://uma.inven.co.kr/dataninfo/friends/",
+      },
+    ],
+  },
+  {
+    images: [
+      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+    ],
+    logo: InvenLogo,
+    title: "콘솔 인벤 시스템 개발",
+    period: "2020.05 - 2020.09",
+    roles: "풀스택 개발 ｜ 연구원",
+    description: [
+      "콘솔 인벤 각 페이지 구성 시스템 개발 진행",
+      "공략 페이지 기사 연동 개발 진행",
+    ],
+    skills: ["PHP", "JQuery", "MYSQL"],
+    links: [
+      {
+        title: "콘솔 인벤 메인 페이지",
+        url: "https://console.inven.co.kr/",
+      },
+      {
+        title: "콘솔 인벤 공략 페이지",
+        url: "https://console.inven.co.kr/hajimari/guide",
+      },
+    ],
   },
   {
     images: [
@@ -126,6 +223,16 @@ const careers: CareerItem[] = [
       "라이브 이후 전반적인 시스템 유지보수 및 신규 기능 개발 담당",
     ],
     skills: ["PHP", "JQuery", "MYSQL"],
+    links: [
+      {
+        title: "우마무스메 DB툴 레이아웃 예시 링크 - 1",
+        url: "https://uma.inven.co.kr/db/chara/",
+      },
+      {
+        title: "우마무스메 DB툴 레이아웃 예시 링크 - 2",
+        url: "https://genshin.inven.co.kr/db/chara/",
+      },
+    ],
   },
   {
     images: [
@@ -150,10 +257,16 @@ const careers: CareerItem[] = [
     period: "2018.08 - 2018.12",
     roles: "백앤드 개발 ｜ 연구원",
     description: [
-      "스킬 DB, 평판 DB, 스킬 시뮬레이터 개발",
-      "로스트아크 인벤 내 각종 모듈 담당 개발",
+      "스킬 시뮬레이터, 스킬 DB, 평판 DB 개발 담당",
+      "로스트아크 인벤 내 각종 모듈 개발 담당",
     ],
     skills: ["PHP", "Jquery", "MYSQL"],
+    links: [
+      {
+        title: "로스트아크 스킬 시뮬레이터 링크",
+        url: "https://lostark.inven.co.kr/dataninfo/simulator/",
+      },
+    ],
   },
   {
     images: [
@@ -200,10 +313,10 @@ export default function CareerList() {
               className="w-28 h-28 object-cover rounded-lg flex-shrink-0 bg-gray-100 dark:bg-neutral-700"
               onClick={() => openModal(career.images)}
             />
-            <div className="flex-1">
-              <div className="flex flex-col gap-1 sm:flex-row sm:items-center">
+            <div className="flex-1 w-full ">
+              <div className="flex w-full flex-row gap-1  items-center sm:gap-1">
                 <Image
-                  className="mt-[1px]"
+                  className="mt-[1px] h-[14px]"
                   src={career.logo.src ?? ""}
                   width={career.logo.width}
                   height={career.logo.height}
@@ -212,6 +325,22 @@ export default function CareerList() {
                 <span className="font-semibold text-gray-900 dark:text-neutral-100 text-lg flex items-center">
                   {career.title}
                 </span>
+                {career.links && (
+                  <div className="flex items-center gap-1 mt-[2px]">
+                    {career.links.map((link, linkIdx) => (
+                      <a
+                        key={linkIdx}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center"
+                        title={link.title}
+                      >
+                        <FaLink className="mr-1" />
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
               <p className="mt-1 text-xs text-gray-600 dark:text-neutral-400">
                 {`${career.roles} ｜ ${career.period}`}
