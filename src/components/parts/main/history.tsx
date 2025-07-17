@@ -34,7 +34,9 @@ export default function History() {
                 ) : (
                   <Image
                     className="shrink-0 size-8 rounded-full"
-                    src={item.logo.src ?? ""}
+                    src={
+                      `${item.logo.src}` ? `/cover-letter/${item.logo.src}` : ""
+                    }
                     width={item.logo.width}
                     height={item.logo.height}
                     alt={item.logo.alt ?? ""}
@@ -81,7 +83,7 @@ export default function History() {
                     <div className="relative flex items-center overflow-hidden">
                       <img
                         className="w-32 sm:w-48 h-auto object-contain rounded-s-lg absolute left-0 top-1/2 -translate-y-1/2"
-                        src={item.link.img.src}
+                        src={`/cover-letter/${item.link.img.src}`}
                         alt={item.link.img.alt}
                       />
                       <div className="grow p-4 ms-32 sm:ms-48">

@@ -2,7 +2,7 @@
   {
     "type": "work",
     "logo": {
-      "src": "/inven2.png",
+      "src": "inven2.png",
       "width": 32,
       "height": 32,
       "alt": "Inven Logo"
@@ -23,7 +23,7 @@
     "link": {
       "href": "#",
       "img": {
-        "src": "/inven-logo.webp",
+        "src": "inven-logo.webp",
         "alt": "인벤 로고"
       },
       "title": "Inven",
@@ -33,7 +33,7 @@
   {
     "type": "education",
     "logo": {
-      "src": "/suwon2.png",
+      "src": "suwon2.png",
       "width": 32,
       "height": 32,
       "alt": "수원대학교 로고"

@@ -23,7 +23,7 @@ interface CareerItem {
 }
 
 const InvenLogo = {
-  src: "/inven2.png",
+  src: "inven2.png",
   width: 14,
   height: 14,
   alt: "인벤 로고",
@@ -307,6 +307,7 @@ export default function CareerList() {
             key={idx}
             className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-lg bg-gray-50 dark:bg-neutral-800 shadow-sm"
           >
+            {/* FIXME: 변경 필요 */}
             <img
               src={career.images[0]}
               alt={career.title}
@@ -317,7 +318,9 @@ export default function CareerList() {
               <div className="flex w-full flex-row gap-1  items-center sm:gap-1">
                 <Image
                   className="mt-[1px] h-[14px]"
-                  src={career.logo.src ?? ""}
+                  src={
+                    career.logo.src ? `/cover-letter/${career.logo.src}` : ""
+                  }
                   width={career.logo.width}
                   height={career.logo.height}
                   alt={career.logo.alt ?? ""}

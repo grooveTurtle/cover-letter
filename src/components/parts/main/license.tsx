@@ -10,14 +10,14 @@ export default function License() {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {license.map((license, idx) => (
+        {licensesData.map((license, idx) => (
           <div
             key={license.title}
             className="flex p-4 gap-3 border border-gray-200 rounded-lg dark:border-neutral-700 items-center"
           >
             <div>
               <Image
-                src={license.src}
+                src={`/cover-letter/${license.src}`}
                 alt={license.alt}
                 width={52}
                 height={52}
