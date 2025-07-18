@@ -170,9 +170,6 @@ export default function Header() {
                     {section.title}
                   </a>
                 ))}
-                <div className="mt-4">
-                  <Darkmode />
-                </div>
               </nav>
             </div>
           </div>
