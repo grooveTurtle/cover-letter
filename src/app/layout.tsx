@@ -9,8 +9,21 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "전종훈 - 개발자 포트폴리오",
-  description: "전종훈의 포트폴리오와 자기소개 페이지입니다.",
+  title: "전종훈 개발자 포트폴리오",
+  description: "전종훈 개발자의 자기소개와 포트폴리오를 소개하는 페이지입니다.",
+  openGraph: {
+    title: "전종훈 개발자 포트폴리오",
+    description:
+      "전종훈 개발자의 자기소개와 포트폴리오를 소개하는 페이지입니다.",
+    images: [
+      {
+        url: "/cover-letter/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "포트폴리오 페이지 미리보기 이미지",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
