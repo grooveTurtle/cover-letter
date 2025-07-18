@@ -1,5 +1,6 @@
 import { FaGithub, FaLink } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
+import { Tooltip } from "react-tooltip";
 
 const sideProjects = [
   {
@@ -15,12 +16,12 @@ const sideProjects = [
     link: [
       {
         type: "link",
-        title: "게임코어 게임 포털 메인 사이트",
+        title: "게임코어 포털 메인 사이트",
         url: "https://gamecore.co.kr/",
       },
       {
         type: "github",
-        title: "GitHub 프로젝트 소개 ReadMe",
+        title: "GitHub 프로젝트 소개 README",
         url: "https://github.com/gamecorelabs/gamecore-monorepo",
       },
       {
@@ -71,7 +72,8 @@ export default function SideProject() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title={link.title}
+                        data-tooltip-id={`tooltip-side-project-link-${idx}-${i}`}
+                        data-tooltip-content={link.title}
                       >
                         {link.type === "github" ? (
                           <FaGithub size={24} />
@@ -82,6 +84,7 @@ export default function SideProject() {
                         ) : (
                           link.title
                         )}
+                        <Tooltip id={`tooltip-side-project-link-${idx}-${i}`} />
                       </a>
                     ))}
                   </div>

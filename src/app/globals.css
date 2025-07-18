@@ -24,6 +24,11 @@
   --font-black: 900;
 }
 
+.react-tooltip {
+  color: #ffffff !important;
+  background-color: #201e1e !important;
+}
+
 body {
   font-family: var(--font-primary);
   font-weight: var(--font-medium);

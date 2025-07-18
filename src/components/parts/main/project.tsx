@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Tooltip } from "react-tooltip";
 import { FaLink } from "react-icons/fa";
 
 interface CareerItem {
@@ -94,15 +95,15 @@ const careers: CareerItem[] = [
     skills: ["PHP", "Svelte", "JQuery", "MYSQL"],
     links: [
       {
-        title: "정복자 시뮬레이터 링크",
+        title: "정복자 시뮬레이터 페이지 링크",
         url: "https://diablo4.inven.co.kr/db/paragon/86555",
       },
       {
-        title: "힘의전서 DB 링크",
+        title: "힘의전서 DB 페이지 링크",
         url: "https://diablo4.inven.co.kr/db/aspect",
       },
       {
-        title: "디아블로 모바일 리뉴얼 인벤 링크",
+        title: "디아블로 모바일 리뉴얼 메인 페이지 링크",
         url: "https://m.inven.co.kr/diablo4/",
       },
     ],
@@ -127,7 +128,7 @@ const careers: CareerItem[] = [
     skills: ["PHP", "JQuery", "MYSQL", "jsrender"],
     links: [
       {
-        title: "파티 인벤 메인 링크",
+        title: "파티 인벤 메인 페이지 링크",
         url: "https://party.inven.co.kr/",
       },
       {
@@ -171,11 +172,11 @@ const careers: CareerItem[] = [
     period: "2021.11 - 2022.06",
     roles: "풀스택 개발 ｜ 연구원",
     description: ["우마무스메 인벤 프로젝트 중 친구찾기 시뮬레이터 개발 담당"],
-    result: ["자료정보 페이지 UV 6만, PV 127만 달성"],
+    result: ["DB 페이지 UV 6만, PV 127만 달성"],
     skills: ["PHP", "JQuery", "JsRender", "MYSQL"],
     links: [
       {
-        title: "우마무스메 친구찾기 시뮬레이터 링크",
+        title: "우마무스메 친구찾기 시뮬레이터 페이지 링크",
         url: "https://uma.inven.co.kr/dataninfo/friends/",
       },
     ],
@@ -187,7 +188,7 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/console/3.png",
       "/cover-letter/project/inven/console/4.png",
     ],
-    title: "콘솔 인벤 시스템 개발",
+    title: "콘솔 인벤 프로젝트",
     period: "2020.05 - 2020.09",
     roles: "풀스택 개발 ｜ 연구원",
     description: [
@@ -212,17 +213,17 @@ const careers: CareerItem[] = [
     period: "2019.09 - 2020.01",
     roles: "풀스택 개발 ｜ 연구원",
     description: [
-      "다양한 형태의 인벤 DB 자료정보 페이지 레이아웃을 모듈 단위로 구성하는 작업 진행",
+      "다양한 형태의 인벤 DB 페이지 레이아웃을 모듈 단위로 구성하는 작업 진행",
       "라이브 이후 전반적인 시스템 유지보수 및 신규 기능 개발 담당",
     ],
     skills: ["PHP", "JQuery", "MYSQL"],
     links: [
       {
-        title: "우마무스메 DB툴 레이아웃 예시 링크 - 1",
+        title: "우마무스메 DB툴 적용 예시 링크 - 1",
         url: "https://uma.inven.co.kr/db/chara/",
       },
       {
-        title: "원신 DB툴 레이아웃 예시 링크 - 2",
+        title: "원신 DB툴 적용 예시 링크 - 2",
         url: "https://genshin.inven.co.kr/db/chara/",
       },
     ],
@@ -256,7 +257,7 @@ const careers: CareerItem[] = [
     skills: ["PHP", "JQuery", "MYSQL"],
     links: [
       {
-        title: "로스트아크 스킬 시뮬레이터 링크",
+        title: "로스트아크 스킬 시뮬레이터 페이지 링크",
         url: "https://lostark.inven.co.kr/dataninfo/simulator/",
       },
     ],
@@ -349,8 +350,11 @@ export default function CareerList() {
                         rel="noopener noreferrer"
                         className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center transition-opacity duration-200"
                         title={link.title}
+                        data-tooltip-id={`tooltip-career-link-${idx}-${linkIdx}`}
+                        data-tooltip-content={link.title}
                       >
                         <FaLink className="mr-1" />
+                        <Tooltip id={`tooltip-career-link-${idx}-${linkIdx}`} />
                       </a>
                     ))}
                   </div>

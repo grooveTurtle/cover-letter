@@ -11,7 +11,7 @@ const sections = [
   { id: "main-license", title: "License" },
   { id: "main-skill", title: "Skills" },
   { id: "main-career", title: "Career" },
-  { id: "main-sideproject", title: "Side Project" },
+  { id: "main-side-project", title: "Side Project" },
 ];
 
 export default function Header() {
@@ -31,7 +31,6 @@ export default function Header() {
             if (el) {
               const { top, height } = el.getBoundingClientRect();
               const offsetTop = window.scrollY + top;
-              // main-license 영역은 좀 더 넉넉하게 잡아줌
               const threshold =
                 section.id === "main-license"
                   ? offsetTop + Math.max(height * 0.5, 100)
