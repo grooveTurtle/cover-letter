@@ -5,7 +5,7 @@ import Main from "@/components/layout/main";
 import Footer from "@/components/layout/footer";
 import { useEffect } from "react";
 
-import OnTheTop from "@/components/parts/main/onthetop";
+import FloatingButtons from "@/components/parts/FloatingButtons";
 
 export default function Home() {
   // Read localStorage only on client side after mount
@@ -30,7 +30,7 @@ export default function Home() {
       <Header />
       <Main />
       <Footer />
-      <OnTheTop />
+      <FloatingButtons />
     </>
   );
 }
