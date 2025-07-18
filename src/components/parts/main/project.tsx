@@ -29,7 +29,7 @@ const careers: CareerItem[] = [
     roles: "풀스택 개발 ｜ 선임 연구원",
     description: [
       "스티커 팩 등록, 구입, 판매 프로세스 개발",
-      "스티커 YY어플리케이션 API 백앤드 개발 및 프론트엔드 개발",
+      "스티커 어플리케이션 API 백앤드 개발 및 프론트엔드 개발",
       "스티커 등록, 판매, 사용 등 각종 액션에 대한 로깅 시스템 개발",
     ],
     result: ["일 이용량 8천~1만건 달성", "스티커 팩 판매량 일 600~700건"],
@@ -297,9 +297,8 @@ export default function CareerList() {
         {careers.map((career, idx) => (
           <li
             key={idx}
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-lg bg-gray-50 dark:bg-neutral-800 shadow-sm"
+            className="group flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-lg bg-gray-50 dark:bg-neutral-800 shadow-sm transition-colors duration-200 hover:bg-blue-50 dark:hover:bg-neutral-700"
           >
-            {/* FIXME: 변경 필요 */}
             <div className="flex flex-row gap-2 sm:block">
               <img
                 src={career.images[0]}
@@ -327,6 +326,13 @@ export default function CareerList() {
                   onClick={() => openModal(career.images, 2)}
                 />
               )}
+              {career.images.length > 1 && (
+                <div className="hidden sm:flex items-center justify-center w-full mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none select-none">
+                  <span className="text-xs text-gray-500 dark:text-neutral-400 flex items-center gap-1 animate-bounce">
+                    <span className="ml-1">⬆ 이미지 더보기</span>
+                  </span>
+                </div>
+              )}
             </div>
             <div className="flex-1 w-full ">
               <div className="flex w-full flex-row gap-1  items-center sm:gap-1">
@@ -341,7 +347,7 @@ export default function CareerList() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center"
+                        className="text-blue-600 dark:text-blue-400 hover:underline text-sm flex items-center transition-opacity duration-200"
                         title={link.title}
                       >
                         <FaLink className="mr-1" />
@@ -394,9 +400,44 @@ export default function CareerList() {
           <div
             className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
             onClick={closeModal}
+            tabIndex={-1}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowLeft" && modalIdx > 0) {
+                setModalIdx((idx) => Math.max(idx - 1, 0));
+              } else if (
+                e.key === "ArrowRight" &&
+                modalIdx < (modalImages?.length ?? 1) - 1
+              ) {
+                setModalIdx((idx) =>
+                  Math.min(idx + 1, (modalImages?.length ?? 1) - 1)
+                );
+              } else if (e.key === "Escape") {
+                closeModal();
+              }
+            }}
+            ref={(el) => {
+              if (el) el.focus();
+            }}
           >
+            <button
+              disabled={modalIdx === 0}
+              onClick={(e) => {
+                e.stopPropagation();
+                setModalIdx((idx) => Math.max(idx - 1, 0));
+              }}
+              className={`fixed left-8 top-1/2 -translate-y-1/2 px-3 py-2 text-2xl rounded-full transition-colors flex items-center justify-center z-50
+              ${
+                modalIdx === 0
+                  ? "bg-gray-200 dark:bg-neutral-700 text-gray-400 cursor-not-allowed"
+                  : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800"
+              }`}
+              aria-label="이전"
+              style={{ minWidth: 44, minHeight: 44 }}
+            >
+              &#8592;
+            </button>
             <div
-              className="relative p-4 bg-white dark:bg-neutral-800 rounded-lg"
+              className="relative p-4 bg-white dark:bg-neutral-800 rounded-lg flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
               <img
@@ -404,39 +445,9 @@ export default function CareerList() {
                 alt={`career-image-${modalIdx}`}
                 className="max-w-[70vw] max-h-[70vh] rounded mb-2"
               />
-              <div className="flex justify-between items-center">
-                <button
-                  disabled={modalIdx === 0}
-                  onClick={() => setModalIdx((idx) => Math.max(idx - 1, 0))}
-                  className={`px-3 py-1 text-sm rounded transition-colors flex items-center justify-center ${
-                    modalIdx === 0
-                      ? "bg-gray-200 dark:bg-neutral-700 text-gray-400 cursor-not-allowed"
-                      : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800"
-                  }`}
-                  aria-label="이전"
-                >
-                  <span className="text-lg">&#8592;</span>
-                </button>
-                <span className="text-xs text-gray-500 dark:text-neutral-400">
-                  {modalIdx + 1} / {modalImages.length}
-                </span>
-                <button
-                  disabled={modalIdx === modalImages.length - 1}
-                  onClick={() =>
-                    setModalIdx((idx) =>
-                      Math.min(idx + 1, modalImages.length - 1)
-                    )
-                  }
-                  className={`px-3 py-1 text-sm rounded transition-colors flex items-center justify-center ${
-                    modalIdx === modalImages.length - 1
-                      ? "bg-gray-200 dark:bg-neutral-700 text-gray-400 cursor-not-allowed"
-                      : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800"
-                  }`}
-                  aria-label="다음"
-                >
-                  <span className="text-lg">&#8594;</span>
-                </button>
-              </div>
+              <span className="text-xs text-gray-500 dark:text-neutral-400 mb-2">
+                {modalIdx + 1} / {modalImages.length}
+              </span>
               <button
                 className="absolute top-2 right-2 text-lg text-gray-700 dark:text-neutral-200 hover:text-red-500 dark:hover:text-red-400"
                 onClick={closeModal}
@@ -445,6 +456,23 @@ export default function CareerList() {
                 ×
               </button>
             </div>
+            <button
+              disabled={modalIdx === modalImages.length - 1}
+              onClick={(e) => {
+                e.stopPropagation();
+                setModalIdx((idx) => Math.min(idx + 1, modalImages.length - 1));
+              }}
+              className={`fixed right-8 top-1/2 -translate-y-1/2 px-3 py-2 text-2xl rounded-full transition-colors flex items-center justify-center z-50
+              ${
+                modalIdx === modalImages.length - 1
+                  ? "bg-gray-200 dark:bg-neutral-700 text-gray-400 cursor-not-allowed"
+                  : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800"
+              }`}
+              aria-label="다음"
+              style={{ minWidth: 44, minHeight: 44 }}
+            >
+              &#8594;
+            </button>
           </div>
         )}
       </ul>

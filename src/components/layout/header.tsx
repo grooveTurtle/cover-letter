@@ -61,13 +61,7 @@ export default function Header() {
       <nav className="mt-1 relative max-w-2xl w-full bg-gray-50 border border-gray-200 rounded-[2rem] mx-2 py-2.5 sm:flex sm:items-center sm:justify-between sm:py-0 sm:px-4 sm:mx-auto dark:bg-neutral-800 dark:border-neutral-600">
         <div className="px-4 sm:px-0 flex justify-between items-center">
           <div>
-            <a
-              className="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80 text-gray-800 dark:text-neutral-200"
-              href="./"
-              aria-label="Preline"
-            >
-              <FaUserTie size={24} />
-            </a>
+            <FaUserTie size={24} />
           </div>
 
           {/* Mobile 햄버거 메뉴 */}
