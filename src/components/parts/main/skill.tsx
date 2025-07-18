@@ -65,7 +65,6 @@ const skillData = {
     { icon: <FaUserCheck size={18} />, label: "책임감" },
     { icon: <FaUserFriends size={18} />, label: "유저 중심 사고" },
     { icon: <FaSmile size={18} />, label: "긍정적인 태도" },
-    { icon: <FaUsers size={18} />, label: "사교성" },
     { icon: <FaBookOpen size={18} />, label: "자기개발" },
     { icon: <FaTools size={18} />, label: "리팩토링" },
   ],

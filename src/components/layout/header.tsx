@@ -60,7 +60,7 @@ export default function Header() {
     <header className="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm ">
       <nav className="mt-1 relative max-w-2xl w-full bg-gray-50 border border-gray-200 rounded-[2rem] mx-2 py-2.5 sm:flex sm:items-center sm:justify-between sm:py-0 sm:px-4 sm:mx-auto dark:bg-neutral-800 dark:border-neutral-600">
         <div className="px-4 sm:px-0 flex justify-between items-center">
-          <div>
+          <div className="text-gray-800 dark:text-neutral-200">
             <FaUserTie size={24} />
           </div>
 
@@ -124,6 +124,12 @@ export default function Header() {
                     document
                       .getElementById("hs-navbar-header-floating-side")
                       ?.classList.add("translate-x-full");
+                    document
+                      .getElementById("hs-navbar-header-floating-overlay")
+                      ?.classList.add("opacity-0");
+                    document
+                      .getElementById("hs-navbar-header-floating-overlay")
+                      ?.classList.add("pointer-events-none");
                   }}
                 >
                   <svg
@@ -159,6 +165,12 @@ export default function Header() {
                       document
                         .getElementById("hs-navbar-header-floating-side")
                         ?.classList.add("translate-x-full");
+                      document
+                        .getElementById("hs-navbar-header-floating-overlay")
+                        ?.classList.add("opacity-0");
+                      document
+                        .getElementById("hs-navbar-header-floating-overlay")
+                        ?.classList.add("pointer-events-none");
                     }}
                   >
                     {section.title}
