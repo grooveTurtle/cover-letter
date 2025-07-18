@@ -3,12 +3,6 @@ import { FaLink } from "react-icons/fa";
 
 interface CareerItem {
   images: string[];
-  logo: {
-    src: string;
-    width: number;
-    height: number;
-    alt?: string;
-  };
   title: string;
   links?: {
     title: string;
@@ -21,13 +15,6 @@ interface CareerItem {
   skills?: string[];
 }
 
-const InvenLogo = {
-  src: "inven2.png",
-  width: 14,
-  height: 14,
-  alt: "인벤 로고",
-};
-
 const careers: CareerItem[] = [
   {
     images: [
@@ -37,7 +24,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/sticker/5.png",
       "/cover-letter/project/inven/sticker/4.png",
     ],
-    logo: InvenLogo,
     title: "스티커 댓글 프로젝트",
     period: "2023.11 - 2024.11",
     roles: "풀스택 개발 ｜ 선임 연구원",
@@ -65,7 +51,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/maple/2.png",
       "/cover-letter/project/inven/maple/3.png",
     ],
-    logo: InvenLogo,
     title: "메이플스토리 인장 리뉴얼 프로젝트",
     period: "2024.03 - 2024.09",
     roles: "PL, 풀스택 개발 ｜ 선임 연구원",
@@ -94,7 +79,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/diablo4/3.png",
       "/cover-letter/project/inven/diablo4/4.png",
     ],
-    logo: InvenLogo,
     title: "디아블로4 인벤 프로젝트",
     period: "2023.04 - 2023.07",
     roles: "풀스택 개발 ｜ 선임 연구원",
@@ -130,7 +114,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/party/2.png",
       "/cover-letter/project/inven/party/3.png",
     ],
-    logo: InvenLogo,
     title: "파티 인벤 프로젝트",
     period: "2022.05 - 2022.07",
     roles: "풀스택 개발 ｜ 연구원",
@@ -159,7 +142,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/webzine/1.png",
       "/cover-letter/project/inven/webzine/3.png",
     ],
-    logo: InvenLogo,
     title: "인벤 모바일 메인 페이지 리뉴얼",
     period: "2022.02 - 2022.09",
     roles: "풀스택 개발 ｜ 연구원",
@@ -185,7 +167,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/uma/2.png",
       "/cover-letter/project/inven/uma/3.png",
     ],
-    logo: InvenLogo,
     title: "우마무스메 친구찾기 시뮬레이터 개발",
     period: "2021.11 - 2022.06",
     roles: "풀스택 개발 ｜ 연구원",
@@ -206,7 +187,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/console/3.png",
       "/cover-letter/project/inven/console/4.png",
     ],
-    logo: InvenLogo,
     title: "콘솔 인벤 시스템 개발",
     period: "2020.05 - 2020.09",
     roles: "풀스택 개발 ｜ 연구원",
@@ -228,7 +208,6 @@ const careers: CareerItem[] = [
   },
   {
     images: ["/cover-letter/project/inven/dbtool/1.png"],
-    logo: InvenLogo,
     title: "인벤 DB툴 개발",
     period: "2019.09 - 2020.01",
     roles: "풀스택 개발 ｜ 연구원",
@@ -253,7 +232,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/cafe/1.png",
       "/cover-letter/project/inven/cafe/2.png",
     ],
-    logo: InvenLogo,
     title: "인벤 카페 개발",
     period: "2019.03 - 2019.09",
     roles: "백엔드 개발 ｜ 연구원",
@@ -268,7 +246,6 @@ const careers: CareerItem[] = [
       "/cover-letter/project/inven/lostark/1.png",
       "/cover-letter/project/inven/lostark/2.png",
     ],
-    logo: InvenLogo,
     title: "로스트아크 인벤 프로젝트",
     period: "2018.08 - 2018.12",
     roles: "백앤드 개발 ｜ 연구원",
@@ -288,7 +265,6 @@ const careers: CareerItem[] = [
     images: [
       "https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
     ],
-    logo: InvenLogo,
     title: "팀 연구 수행 및 사이드 프로젝트",
     period: "2018.04 - 2024.12",
     roles: "연구 진행 ｜ 선임 연구원",
@@ -354,15 +330,6 @@ export default function CareerList() {
             </div>
             <div className="flex-1 w-full ">
               <div className="flex w-full flex-row gap-1  items-center sm:gap-1">
-                <img
-                  className="mt-[1px] h-[14px]"
-                  src={
-                    career.logo.src ? `/cover-letter/${career.logo.src}` : ""
-                  }
-                  width={career.logo.width}
-                  height={career.logo.height}
-                  alt={career.logo.alt ?? ""}
-                />
                 <span className="font-semibold text-gray-900 dark:text-neutral-100 text-lg flex items-center">
                   {career.title}
                 </span>
