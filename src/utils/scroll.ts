@@ -14,11 +14,9 @@ export function scrollToElement(
   if (element) {
     // element.scrollIntoView(option);
 
-    // const offset = 70;
-    // const yOffset =
-    //   element.getBoundingClientRect().top + window.scrollY - offset;
-    // window.scrollTo({ top: yOffset, behavior: "smooth" });
-
-    elementScrollIntoView(element, { behavior: "smooth" });
+    const offset = 70;
+    const yOffset =
+      element.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top: yOffset, behavior: "smooth" });
   }
 }

@@ -6,42 +6,51 @@ import { useEffect, useState } from "react";
 
 const sections = [
   { id: "main-profile", title: "Profile" },
-  // { id: "main-about", title: "About" },
   { id: "main-history", title: "History" },
   { id: "main-license", title: "License" },
   { id: "main-skill", title: "Skill" },
   { id: "main-career", title: "Career" },
-  // { id: "main-testimonial", title: "Testimonial" },
-  // { id: "main-article", title: "Article" },
 ];
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const sectionElements = sections.map((section) =>
-      document.getElementById(section.id)
-    );
+    let ticking = false;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id); // Update active section
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollPosition = window.scrollY + window.innerHeight / 3;
+          let currentSection = sections[0].id;
+
+          for (const section of sections) {
+            const el = document.getElementById(section.id);
+            if (el) {
+              const { top, height } = el.getBoundingClientRect();
+              const offsetTop = window.scrollY + top;
+              // main-license 영역은 좀 더 넉넉하게 잡아줌
+              const threshold =
+                section.id === "main-license"
+                  ? offsetTop + Math.max(height * 0.5, 100)
+                  : offsetTop;
+              if (scrollPosition >= threshold) {
+                currentSection = section.id;
+              }
+            }
           }
+          setActiveSection(currentSection);
+          ticking = false;
         });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 1,
+        ticking = true;
       }
-    );
+    };
 
-    sectionElements.forEach((el) => el && observer.observe(el));
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
     return () => {
-      sectionElements.forEach((el) => el && observer.unobserve(el));
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -97,9 +106,13 @@ export default function Header() {
               className="hs-collapse-toggle flex justify-center items-center size-6 border border-gray-200 text-gray-500 rounded-full hover:bg-gray-200 focus:outline-none focus:bg-gray-200 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
               id="hs-navbar-header-floating-collapse"
               aria-expanded="false"
-              aria-controls="hs-navbar-header-floating"
+              aria-controls="hs-navbar-header-floating-side"
               aria-label="Toggle navigation"
-              data-hs-collapse="#hs-navbar-header-floating"
+              onClick={() => {
+                document
+                  .getElementById("hs-navbar-header-floating-side")
+                  ?.classList.toggle("translate-x-full");
+              }}
             >
               <svg
                 className="hs-collapse-open:hidden shrink-0 size-3.5"
@@ -133,6 +146,64 @@ export default function Header() {
                 <path d="m6 6 12 12" />
               </svg>
             </button>
+            <div
+              id="hs-navbar-header-floating-side"
+              className="fixed top-0 right-0 z-50 h-full w-64 bg-white dark:bg-neutral-900 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col"
+              style={{ transitionProperty: "transform" }}
+            >
+              <div className="flex justify-end p-4">
+                <button
+                  aria-label="Close menu"
+                  className="text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
+                  onClick={() => {
+                    document
+                      .getElementById("hs-navbar-header-floating-side")
+                      ?.classList.add("translate-x-full");
+                  }}
+                >
+                  <svg
+                    className="size-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                </button>
+              </div>
+              <nav className="flex flex-col gap-2 px-6">
+                {sections.map((section, index) => (
+                  <a
+                    key={index}
+                    className={`py-2 px-2 rounded font-medium transition-colors ${
+                      activeSection === section.id
+                        ? "bg-gray-100 text-gray-800 dark:bg-neutral-800 dark:text-neutral-200"
+                        : "text-gray-600 hover:bg-gray-100 hover:text-gray-800 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+                    }`}
+                    href={`#${section.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToElement(section.id);
+                      document
+                        .getElementById("hs-navbar-header-floating-side")
+                        ?.classList.add("translate-x-full");
+                    }}
+                  >
+                    {section.title}
+                  </a>
+                ))}
+                <div className="mt-4">
+                  <Darkmode />
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
 
