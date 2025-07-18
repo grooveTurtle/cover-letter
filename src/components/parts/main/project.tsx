@@ -31,8 +31,11 @@ const InvenLogo = {
 const careers: CareerItem[] = [
   {
     images: [
-      "https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
-      "https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/sticker/3.png",
+      "/cover-letter/project/inven/sticker/1.png",
+      "/cover-letter/project/inven/sticker/2.png",
+      "/cover-letter/project/inven/sticker/5.png",
+      "/cover-letter/project/inven/sticker/4.png",
     ],
     logo: InvenLogo,
     title: "스티커 댓글 프로젝트",
@@ -40,7 +43,7 @@ const careers: CareerItem[] = [
     roles: "풀스택 개발 ｜ 선임 연구원",
     description: [
       "스티커 팩 등록, 구입, 판매 프로세스 개발",
-      "스티커 어플리케이션 API 백앤드 개발 및 프론트엔드 개발",
+      "스티커 YY어플리케이션 API 백앤드 개발 및 프론트엔드 개발",
       "스티커 등록, 판매, 사용 등 각종 액션에 대한 로깅 시스템 개발",
     ],
     result: ["일 이용량 8천~1만건 달성", "스티커 팩 판매량 일 600~700건"],
@@ -58,8 +61,9 @@ const careers: CareerItem[] = [
   },
   {
     images: [
-      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
-      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/maple/1.png",
+      "/cover-letter/project/inven/maple/2.png",
+      "/cover-letter/project/inven/maple/3.png",
     ],
     logo: InvenLogo,
     title: "메이플스토리 인장 리뉴얼 프로젝트",
@@ -85,7 +89,10 @@ const careers: CareerItem[] = [
   },
   {
     images: [
-      "https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/diablo4/1.png",
+      "/cover-letter/project/inven/diablo4/2.png",
+      "/cover-letter/project/inven/diablo4/3.png",
+      "/cover-letter/project/inven/diablo4/4.png",
     ],
     logo: InvenLogo,
     title: "디아블로4 인벤 프로젝트",
@@ -118,7 +125,10 @@ const careers: CareerItem[] = [
   },
   {
     images: [
-      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/party/4.png",
+      "/cover-letter/project/inven/party/1.png",
+      "/cover-letter/project/inven/party/2.png",
+      "/cover-letter/project/inven/party/3.png",
     ],
     logo: InvenLogo,
     title: "파티 인벤 프로젝트",
@@ -145,7 +155,9 @@ const careers: CareerItem[] = [
   },
   {
     images: [
-      "https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/webzine/2.png",
+      "/cover-letter/project/inven/webzine/1.png",
+      "/cover-letter/project/inven/webzine/3.png",
     ],
     logo: InvenLogo,
     title: "인벤 모바일 메인 페이지 리뉴얼",
@@ -169,7 +181,9 @@ const careers: CareerItem[] = [
   },
   {
     images: [
-      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/uma/1.png",
+      "/cover-letter/project/inven/uma/2.png",
+      "/cover-letter/project/inven/uma/3.png",
     ],
     logo: InvenLogo,
     title: "우마무스메 친구찾기 시뮬레이터 개발",
@@ -187,7 +201,10 @@ const careers: CareerItem[] = [
   },
   {
     images: [
-      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/console/1.png",
+      "/cover-letter/project/inven/console/2.png",
+      "/cover-letter/project/inven/console/3.png",
+      "/cover-letter/project/inven/console/4.png",
     ],
     logo: InvenLogo,
     title: "콘솔 인벤 시스템 개발",
@@ -210,9 +227,7 @@ const careers: CareerItem[] = [
     ],
   },
   {
-    images: [
-      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
-    ],
+    images: ["/cover-letter/project/inven/dbtool/1.png"],
     logo: InvenLogo,
     title: "인벤 DB툴 개발",
     period: "2019.09 - 2020.01",
@@ -228,14 +243,15 @@ const careers: CareerItem[] = [
         url: "https://uma.inven.co.kr/db/chara/",
       },
       {
-        title: "우마무스메 DB툴 레이아웃 예시 링크 - 2",
+        title: "원신 DB툴 레이아웃 예시 링크 - 2",
         url: "https://genshin.inven.co.kr/db/chara/",
       },
     ],
   },
   {
     images: [
-      "https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/cafe/1.png",
+      "/cover-letter/project/inven/cafe/2.png",
     ],
     logo: InvenLogo,
     title: "인벤 카페 개발",
@@ -249,7 +265,8 @@ const careers: CareerItem[] = [
   },
   {
     images: [
-      "https://images.unsplash.com/photo-1616427592793-67b858804534?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
+      "/cover-letter/project/inven/lostark/1.png",
+      "/cover-letter/project/inven/lostark/2.png",
     ],
     logo: InvenLogo,
     title: "로스트아크 인벤 프로젝트",
@@ -259,7 +276,7 @@ const careers: CareerItem[] = [
       "스킬 시뮬레이터, 스킬 DB, 평판 DB 개발 담당",
       "로스트아크 인벤 내 각종 모듈 개발 담당",
     ],
-    skills: ["PHP", "Jquery", "MYSQL"],
+    skills: ["PHP", "JQuery", "MYSQL"],
     links: [
       {
         title: "로스트아크 스킬 시뮬레이터 링크",
@@ -307,12 +324,34 @@ export default function CareerList() {
             className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 rounded-lg bg-gray-50 dark:bg-neutral-800 shadow-sm"
           >
             {/* FIXME: 변경 필요 */}
-            <img
-              src={career.images[0]}
-              alt={career.title}
-              className="w-28 h-28 object-cover rounded-lg flex-shrink-0 bg-gray-100 dark:bg-neutral-700"
-              onClick={() => openModal(career.images)}
-            />
+            <div className="flex flex-row gap-2 sm:block">
+              <img
+                src={career.images[0]}
+                alt={career.title}
+                className="w-28 h-28 object-cover rounded-lg flex-shrink-0 bg-gray-100 dark:bg-neutral-700"
+                onClick={
+                  career.images.length > 1
+                    ? () => openModal(career.images, 0)
+                    : undefined
+                }
+              />
+              {career.images[1] && (
+                <img
+                  src={career.images[1]}
+                  alt={career.title}
+                  className="w-28 h-28 object-cover rounded-lg flex-shrink-0 bg-gray-100 dark:bg-neutral-700 sm:hidden"
+                  onClick={() => openModal(career.images, 1)}
+                />
+              )}
+              {career.images[2] && (
+                <img
+                  src={career.images[2]}
+                  alt={career.title}
+                  className="w-28 h-28 object-cover rounded-lg flex-shrink-0 bg-gray-100 dark:bg-neutral-700 sm:hidden"
+                  onClick={() => openModal(career.images, 2)}
+                />
+              )}
+            </div>
             <div className="flex-1 w-full ">
               <div className="flex w-full flex-row gap-1  items-center sm:gap-1">
                 <img
@@ -402,11 +441,16 @@ export default function CareerList() {
                 <button
                   disabled={modalIdx === 0}
                   onClick={() => setModalIdx((idx) => Math.max(idx - 1, 0))}
-                  className="px-3 py-1 text-sm"
+                  className={`px-3 py-1 text-sm rounded transition-colors flex items-center justify-center ${
+                    modalIdx === 0
+                      ? "bg-gray-200 dark:bg-neutral-700 text-gray-400 cursor-not-allowed"
+                      : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800"
+                  }`}
+                  aria-label="이전"
                 >
-                  이전
+                  <span className="text-lg">&#8592;</span>
                 </button>
-                <span className="text-xs text-gray-500">
+                <span className="text-xs text-gray-500 dark:text-neutral-400">
                   {modalIdx + 1} / {modalImages.length}
                 </span>
                 <button
@@ -416,14 +460,20 @@ export default function CareerList() {
                       Math.min(idx + 1, modalImages.length - 1)
                     )
                   }
-                  className="px-3 py-1 text-sm"
+                  className={`px-3 py-1 text-sm rounded transition-colors flex items-center justify-center ${
+                    modalIdx === modalImages.length - 1
+                      ? "bg-gray-200 dark:bg-neutral-700 text-gray-400 cursor-not-allowed"
+                      : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800"
+                  }`}
+                  aria-label="다음"
                 >
-                  다음
+                  <span className="text-lg">&#8594;</span>
                 </button>
               </div>
               <button
-                className="absolute top-2 right-2 text-lg"
+                className="absolute top-2 right-2 text-lg text-gray-700 dark:text-neutral-200 hover:text-red-500 dark:hover:text-red-400"
                 onClick={closeModal}
+                aria-label="닫기"
               >
                 ×
               </button>

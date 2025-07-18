@@ -9,8 +9,9 @@ const sections = [
   { id: "main-profile", title: "Profile" },
   { id: "main-history", title: "History" },
   { id: "main-license", title: "License" },
-  { id: "main-skill", title: "Skill" },
+  { id: "main-skill", title: "Skills" },
   { id: "main-career", title: "Career" },
+  { id: "main-sideproject", title: "Side Project" },
 ];
 
 export default function Header() {

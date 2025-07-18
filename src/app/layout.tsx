@@ -9,7 +9,7 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "전종훈 개발자 포트폴리오",
+  title: "전종훈 개발자 포트폴리오 페이지",
   description: "전종훈 개발자의 자기소개와 포트폴리오를 소개하는 페이지입니다.",
   openGraph: {
     title: "전종훈 개발자 포트폴리오",
