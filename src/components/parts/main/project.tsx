@@ -239,8 +239,8 @@ const careers: CareerItem[] = [
     period: "2019.03 - 2019.09",
     roles: "백엔드 개발 ｜ 연구원",
     description: [
-      "카페 설정 및 회원 관리 페이지 개발",
-      "카페 설정, 관리 내역 등 로그 시스템 개발",
+      "카페 설정 및 회원 관리 시스템 개발",
+      "카페 액션 관련 로그 시스템 개발",
     ],
     skills: ["PHP", "JQuery", "MYSQL"],
   },
@@ -265,9 +265,7 @@ const careers: CareerItem[] = [
     ],
   },
   {
-    images: [
-      "https://images.unsplash.com/photo-1656618724305-a4257e46e847?q=80&w=320&auto=format&fit=crop&ixlib=rb-4.0.3",
-    ],
+    images: ["/cover-letter/og-image.png"],
     title: "팀 연구 수행 및 사이드 프로젝트",
     period: "2018.04 - 2024.12",
     roles: "연구 진행 ｜ 선임 연구원",

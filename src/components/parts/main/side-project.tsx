@@ -4,30 +4,30 @@ import { Tooltip } from "react-tooltip";
 
 const sideProjects = [
   {
-    title: "게임코어 게임 포털 웹사이트 개발 (https://gamecore.co.kr)",
+    title: "게임 포털 웹사이트 게임코어 프로젝트 (https://gamecore.co.kr)",
     period: "2025.06 ~ (진행 중)",
     description: [
-      "메인 페이지와 각 게임별 서브 도메인으로 구성된 게임 포털 웹사이트 개발 개인 프로젝트",
-      "메인 페이지에는 각종 게임에 대한 뉴스들과 정보들을 제공하며, 각 서브도메인의 게임 사이트에는 게임에 대한 상세 정보와 커뮤니티 기능을 지향하는 방향으로 개발 진행중",
+      "메인 페이지와 각 게임별 서브 도메인으로 구성된 게임 포털 웹사이트 프로젝트",
+      "메인 페이지에는 각종 게임에 대한 뉴스들과 정보들을 제공하며, 각 서브도메인의 게임 사이트에는 해당 게임에 대한 상세 정보 제공을 지향함",
       "비회원/회원 모두 글작성과 댓글, 좋아요/싫어요 활동이 가능한 오픈형 게시판 시스템 구현",
       "기술 스택: NestJs(^11), NextJs(^15), TailwindCSS(^3), MySQL, Docker Compose, Github Actions(CI/CD), AWS(EC2, S3, RDS)",
-      "* 자세한 프로젝트 설명 및 구조에 대해서는 아래 github README.md 또는 Notion 공개 문서 링크 참고 부탁드립니다.",
+      "* 자세한 프로젝트 설명 및 구조에 대해서는 Notion 문서 링크 참고 부탁드립니다.",
     ],
     link: [
       {
         type: "link",
         title: "게임코어 포털 메인 사이트",
-        url: "https://gamecore.co.kr/",
-      },
-      {
-        type: "github",
-        title: "GitHub 프로젝트 소개 README",
-        url: "https://github.com/gamecorelabs/gamecore-monorepo",
+        url: "https://gamecore.co.kr",
       },
       {
         type: "notion",
-        title: "Notion 문서",
-        url: "#",
+        title: "프로젝트 소개 Notion 문서",
+        url: "https://gamecore-doc.notion.site",
+      },
+      {
+        type: "github",
+        title: "GitHub 프로젝트 저장소",
+        url: "https://github.com/gamecorelabs/gamecore-monorepo",
       },
     ],
   },
