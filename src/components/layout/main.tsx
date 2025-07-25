@@ -9,7 +9,7 @@ import SideProject from "@/components/parts/main/side-project";
 export default function Main() {
   return (
     <main id="content">
-      <div className="w-full max-w-2xl mx-auto pt-10 md:pt-16 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-4xl mx-auto pt-6 px-4 sm:px-6 lg:px-8 print:pt-0 print:px-0 print:max-w-none">
         <Profile />
 
         <About />
@@ -22,7 +22,7 @@ export default function Main() {
 
         <Project />
 
-        <SideProject />
+        {/* <SideProject /> */}
       </div>
     </main>
   );

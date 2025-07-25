@@ -33,3 +33,33 @@ body {
   font-family: var(--font-primary);
   font-weight: var(--font-medium);
 }
+
+/* PDF 출력을 위한 스타일 */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  body {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  /* 페이지 나누기 방지 */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+  
+  /* 섹션 간 페이지 나누기 제어 */
+  .section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  /* 불필요한 여백 제거 */
+  @page {
+    margin: 0.5in;
+  }
+}
