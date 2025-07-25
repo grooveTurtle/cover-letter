@@ -42,14 +42,16 @@ body {
   }
   
   body {
-    font-size: 12px;
-    line-height: 1.4;
+    font-size: 11px;
+    line-height: 1.3;
   }
   
   /* 페이지 나누기 방지 */
   h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid;
     break-after: avoid-page;
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
   
   /* 섹션 간 페이지 나누기 제어 */
@@ -58,8 +60,82 @@ body {
     break-inside: avoid;
   }
   
+  /* 기능 섹션 페이지 나누기 방지 */
+  .print\:break-inside-avoid {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  .print\:break-after-avoid {
+    page-break-after: avoid !important;
+    break-after: avoid-page !important;
+  }
+  
+  /* 간격 줄이기 */
+  .print\:space-y-1 > * + * {
+    margin-top: 0.25rem !important;
+  }
+  
+  .print\:space-y-2 > * + * {
+    margin-top: 0.5rem !important;
+  }
+  
   /* 불필요한 여백 제거 */
   @page {
     margin: 0.5in;
+    size: A4;
+  }
+  
+  /* 강제로 함께 유지 */
+  .keep-together {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  /* 개발 완료/예정 항목들을 함께 유지 */
+  .features-container {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+  
+  /* 첫 페이지 강제 페이지 브레이크 방지 */
+  .print\:break-before-page {
+    page-break-before: page !important;
+    break-before: page !important;
+  }
+  
+  /* 첫 페이지 내용 최적화 */
+  .print\:leading-tight {
+    line-height: 1.1 !important;
+  }
+  
+  /* 그리드 레이아웃 PDF 최적화 */
+  @media print {
+    .grid {
+      display: block !important;
+    }
+    
+    .grid > * {
+      margin-bottom: 1rem !important;
+    }
+    
+    /* PDF에서 특정 요소 간격 줄이기 */
+    .print\:mt-0 {
+      margin-top: 0 !important;
+    }
+    
+    .print\:mt-1 {
+      margin-top: 0.25rem !important;
+    }
+    
+    .print\:mb-1 {
+      margin-bottom: 0.25rem !important;
+    }
+    
+    .print\:space-y-1 > * + * {
+      margin-top: 0.25rem !important; 
+    }
   }
 }

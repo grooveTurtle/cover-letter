@@ -5,6 +5,7 @@ import Skill from "@/components/parts/main/skill";
 import Project from "@/components/parts/main/project";
 import Education from "@/components/parts/main/license";
 import SideProject from "@/components/parts/main/side-project";
+import SideProject2 from "../parts/main/side-project2";
 
 export default function Main() {
   return (
@@ -23,6 +24,8 @@ export default function Main() {
         <Project />
 
         {/* <SideProject /> */}
+
+        <SideProject2 />
       </div>
     </main>
   );
