@@ -2,7 +2,7 @@ import { FaGithub, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="py-6 border-t border-gray-200 dark:border-neutral-700">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-600 dark:text-neutral-400">
