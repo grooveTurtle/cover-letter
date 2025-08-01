@@ -197,6 +197,7 @@ export default function GameCore() {
                 <a
                   href={project.url}
                   className="text-blue-600 dark:text-blue-400"
+                  target="_blank"
                 >
                   {project.url}
                 </a>
